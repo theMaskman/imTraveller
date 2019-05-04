@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>home page</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge"> 
+
+        <link rel="stylesheet" href="Bootstrap4-starter\Bootstrap4\conFusion\node_modules\bootstrap\dist\css\bootstrap.min.css">
+        <link rel="stylesheet" href="Bootstrap4-starter\Bootstrap4\conFusion\node_modules\font-awesome\css\font-awesome.min.css">
+        <link rel="stylesheet" href="Bootstrap4-starter\Bootstrap4\conFusion\node_modules\bootstrap-social\bootstrap-social.css">
+        <style>
+            #from{
+                height: 1cm;
+            
+            }
+            #to{
+                height: 1cm;
+                margin-top: 0.5cm; 
+            }
+            #date{
+                height: 1cm;
+              
+            }
+            #search{
+                background-color:  rgb(42, 42, 100);
+                height: 1cm;
+                width: 2.5cm;
+                margin-left: 3cm;
+              
+            }
+            body{
+                position: relative;
+                height: 100%;
+                margin: 0cm;
+            }
+            
+            .carousel-item{
+                height: 12cm;
+                width: 100%;
+            }
+            .carousel-item img{
+                position: absolute;
+                top: 0cm;
+                left: 0cm;
+                width: 100%;
+                height: auto;
+            }
+         
+            .carousel-caption {
+                top: 0;
+                left: 0;
+                bottom: auto;
+}  
+            .col{
+                position: relative;
+                margin: 0cm;
+            }
+          
+            #arrival{
+                margin-left: 1.5cm;
+                margin-top: 11.2cm;
+            }
+            #dest{
+                margin-left: 3.5cm;
+            }
+            #date{
+                margin-left: 3cm;
+            }
+           form{
+               position: absolute;
+               top: 0cm;
+               left: 1cm;
+           }
+        
+            .autocomplete-active {
+                background-color: DodgerBlue !important; 
+                color: rgb(43, 40, 41); 
+            }
+
+           .autocomplete {
+            position: relative;
+  display: inline-block;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+  cursor: pointer;
+}
+
+.autocomplete-items {
+    position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+
+.autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+.heading{
+    color: rgb(58, 58, 146);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4cm;
+    margin-top: 0.01cm;
+}
+        </style>
+    </head>
+    <body>
+        <header class="jumbotron" style="background-color: rgb(54, 53, 53)">
+            <div class="container">
+                <div class="row row-header">
+                    <div class="col-sm-6 col-sm-offset-6">
+                        <h1 class="heading">IamTraveller</h1>
+                    </div>
+                </div>
+                <div class="row row-content">
+                    <div class="col">
+                        <div class="carousel slide" id="mycarousel" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <img class="d-block img-fluid" src="D:\pics\pic2.jpg" alt="pic1">
+                                <div class="carousel-caption">
+                                    <h3 style="margin-top: 3cm">"It is better to see something once than to hear about<br> it a thousand times.”</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid" src="D:\pics\pic1.jpg" alt="pic2">
+                                <div class="carousel-caption">
+                                    <h3 style="margin-top: 3cm">“To Travel is to Live”</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid" src="D:\pics\pic8.jpg" alt="pic3">
+                                <div class="carousel-caption">
+                                    <h3 style="color: rgb(63, 60, 59)">“Work, Travel, Save, Repeat”</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid" src="D:\pics\pic9.jpg" alt="pic4">
+                                <div class="carousel-caption">
+                                    <h3 style="margin-top: 3cm"> “Traveling – it leaves you speechless, <br>then turns you into a storyteller.”</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid" src="D:\pics\pic10.jpg" alt="pic5">
+                                <div class="carousel-caption">
+                                    <h3 style="color: rgb(63, 60, 59)">“The journey not the arrival matters.”</h3>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <form autocomplete="off">
+            <fieldset>
+                <span class="autocomplete" id="arrival" >
+                    <input type="text" id="from" placeholder="FROM" required="required">    
+                </span>
+                <span class="autocomplete" id="dest">
+                    <input type="text" id="to" placeholder="TO" required="required">
+                </span>
+                <input type="date" id="date" required="required">
+                <input type="submit" id="search" value="Search">
+            </fieldset>
+        </form>
+        <div></div>
+
+              
+                <footer class="footer" style="padding-top:1cm">
+                        <div class="container">
+                            <div class="row">             
+                                <div class="col-4 offset-1 col-sm-2">
+                                    <h5 >Links</h5>
+                                    <ul class="list-unstyled">
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">About</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-7 col-sm-5">
+                                    <h5>Our Address</h5>
+                                    <address>
+                                      121, Clear Water Bay Road<br>
+                                      Clear Water Bay, Kowloon<br>
+                                      DELHI<br>
+                                      <i class="fa fa-phone fa-lg"></i>Tel.: +852 1234 5678<br>
+                                      <i class="fa fa-fax fa-lg"></i>Fax: +852 8765 4321<br>
+                                      <i class="fa fa-envelope fa-lg"></i>Email: <a href="mailto:imtraveller@gmail.net">imtraveller@gmail.net</a>
+                                   </address>
+                                </div>
+                                <div class="col-12 col-sm-4 align-self-center">
+                                    <div class="text-center">
+                                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus fa-lg"></i></a>
+                                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
+                                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i></a>
+                                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
+                                        <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
+                                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o fa-lg"></i></a>
+                                    </div>
+                                </div>
+                           </div>
+                           <div class="row justify-content-center">             
+                                <div class="col-auto">
+                                    <p>© Copyright 2018 Ristorante Con Fusion</p>
+                                </div>
+                           </div>
+                        </div>
+                   
+            <script src="Bootstrap4-starter\Bootstrap4\conFusion\node_modules/jquery/dist/jquery.slim.min.js"></script>
+            <script src="Bootstrap4-starter\Bootstrap4\conFusion\node_modules/popper.js/dist/umd/popper.min.js"></script>
+            <script src="Bootstrap4-starter\Bootstrap4\conFusion\node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+            <script>
+                    function autocomplete(inp, arr) {
+                      var currentFocus;
+        
+                      inp.addEventListener("input", function(e) {
+                          var a, b, i, val = this.value;
+                    
+                          closeAllLists();
+                          if (!val) { return false;}
+                          currentFocus = -1;
+                     
+                          a = document.createElement("DIV");
+                          a.setAttribute("id", this.id + "autocomplete-list");
+                          a.setAttribute("class", "autocomplete-items");
+                    
+                          this.parentNode.appendChild(a);
+                      
+                          for (i = 0; i < arr.length; i++) {
+                          
+                            if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                         
+                              b = document.createElement("DIV");
+                            
+                              b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                              b.innerHTML += arr[i].substr(val.length);
+                   
+                              b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                          
+                              b.addEventListener("click", function(e) {
+                          
+                                  inp.value = this.getElementsByTagName("input")[0].value;
+                                 
+                                  closeAllLists();
+                              });
+                              a.appendChild(b);
+                            }
+                          }
+                      });
+                   
+                      inp.addEventListener("keydown", function(e) {
+                          var x = document.getElementById(this.id + "autocomplete-list");
+                          if (x) x = x.getElementsByTagName("div");
+                          if (e.keyCode == 40) {
+                       
+                            currentFocus++;
+                           
+                            addActive(x);
+                          } else if (e.keyCode == 38) { 
+                            currentFocus--;
+                         
+                            addActive(x);
+                          } else if (e.keyCode == 13) {
+                            
+                            e.preventDefault();
+                            if (currentFocus > -1) {
+                              
+                              if (x) x[currentFocus].click();
+                            }
+                          }
+                      });
+                      function addActive(x) {
+                       
+                        if (!x) return false;
+                        
+                        removeActive(x);
+                        if (currentFocus >= x.length) currentFocus = 0;
+                        if (currentFocus < 0) currentFocus = (x.length - 1);
+           
+                        x[currentFocus].classList.add("autocomplete-active");
+                      }
+                      function removeActive(x) {
+                
+                        for (var i = 0; i < x.length; i++) {
+                          x[i].classList.remove("autocomplete-active");
+                        }
+                      }
+                      function closeAllLists(elmnt) {
+                    
+                        var x = document.getElementsByClassName("autocomplete-items");
+                        for (var i = 0; i < x.length; i++) {
+                          if (elmnt != x[i] && elmnt != inp) {
+                            x[i].parentNode.removeChild(x[i]);
+                          }
+                        }
+                      }
+               
+                      document.addEventListener("click", function (e) {
+                          closeAllLists(e.target);
+                      });
+                    }
+                    
+                   
+                    var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua & Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia & Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central Arfrican Republic","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cuba","Curacao","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauro","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","North Korea","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre & Miquelon","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","St Kitts & Nevis","St Lucia","St Vincent","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad & Tobago","Tunisia","Turkey","Turkmenistan","Turks & Caicos","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States of America","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
+                    
+                    
+                    autocomplete(document.getElementById("from"), countries);
+                    autocomplete(document.getElementById("to"),countries);
+                    $(document).ready(function() {
+                    $("#mycarousel").carousel( { interval: 2000 } );
+                    });
+                    </script>
+                          
+        </footer>
+    </body>
+</html> 
